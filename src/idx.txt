@@ -1,0 +1,8 @@
+This file documents the idx struct used in the ETwireSim code.
+Field               Description
+.elect              struct that contains electrical indices
+    .dir            indices for electric Dirichlet nodes (union of .excitation and .gnd)
+    .dof            indices for electric degrees of freedom
+.therm              struct that contains thermal indices
+    .dir            indices for thermal Dirichlet nodes (union of .excitation and .gnd)
+    .dof            indices for thermal degrees of freedom

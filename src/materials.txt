@@ -1,0 +1,9 @@
+This file documents the materials struct used in the ETwireSim code.
+Field           Unit        Description
+.H11            [W]         convection matrix (optional, default: no convection)
+.H13            [W]         convection matrix (optional, default: no convection)
+.Meps           [F]         electric capacitance matrix (3np-by-3np)
+.Mlambda        [W/K]       thermal conductance matrix (3np-by-3np)
+.Mrhoc          [J/K]       thermal capacitance matrix (np-by-np)
+.Msigma         [S]         electric conductance matrix (3np-by-3np)
+.sigma          [S/m]       electric conductivity (np-by-1)

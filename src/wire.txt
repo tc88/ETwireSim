@@ -1,0 +1,37 @@
+This file documents the wire struct used in the ETwireSim code.
+Fields      Unit        Description
+.A          [m^2]       cross section areas of wires (Nwires-by-1)
+.cplCoeff   []          coefficient for 1D-3D coupling
+.DSd        [m]         dual length matrix for 1D mesh of wire (Nwires-by-(N1D-1))
+.Gel        [S]         electric conductances of wire segments (Nwires-by-(N1D-1))
+.height     [m]         height of the wire (Nwires-by-1)
+.idx        []          indices of wire in 3D mesh (Nwires-by-N1D)
+.ipnCpl     []          indices of Ncpl primary nodes uniformly distributed on the square's boundary surrounding ipnCenter with radius rCpl.
+                        These values are given for all N1D coupling points of all Nwires wires (Nwires-by-N1D-by-Ncpl)
+                        Can be obtained using getCplIdx(...)
+.kappa      [1/m]       curvature defined by Frenet-Serret coordinates
+.Klambda    [W/K]       thermal wire stiffness matrix (np-by-np)
+.Ksigma     [S]         electrical wire stiffness matrix (np-by-np)
+.L          [m]         lengths of wires (Nwires-by-N1D)
+.lambda     [Wm/K]      thermal conductivity of wire (Nwires-by-1)
+.Msigma     [S]         electric conductance of wire (struct of length Nwires, each entry contains matrix of size N1D-by-N1D)
+.Mlambda    [W/K]       thermal conductance of wire (struct of length Nwires, each entry contains matrix of size N1D-by-N1D)
+.N          []          number of wires
+.N1D        []          number of 1D points
+.Ps         []          1D differentiation matrix (N1D-1-by-N1D)
+.r          [m]         radius of the wire (scalar)
+.R13        []          projects from 3D solution to 1D solution at coupling points (cell array: Nwires-by-1)
+.R31        []          projects from 1D solution to 3D solution (cell array: Nwires-by-1)
+.rCpl                   radius of couple points around a 1D wire point. If rCpl.val == 0, phi1D == phi3D holds.
+    .fun    []          anonymous function depending on wire.kappa that is used to compute wire.rCpl.val
+    .val    [m]         value of rCpl (Nwires-by-N1D)
+                        This allows using existing mesh points for the coupling. (scalar)
+.select     []          vector of wire indices that shall be included. Use 1 if a wire is included and 0 if not. (Nwire-by-1)
+.sigma      [Sm]        electrical conductivity of wire (Nwires-by-1)
+.sParam     []          parametrization of wires (Nwires-by-N1D)
+.x          [m]         x-coordinates of Nwire wires with N1D points (Nwires-by-1ND)
+.xCpl       [m]         x-coordinate in accordance to wire.ipnCpl (Nwire-by-N1D-by-Ncpl)
+.y          [m]         y-coordinates of Nwire wires with N1D points (Nwires-by-1ND)
+.yCpl       [m]         y-coordinate in accordance to wire.ipnCpl (Nwire-by-N1D-by-Ncpl)
+.z          [m]         z-coordinates of Nwire wires with N1D points (Nwires-by-1ND)
+.zCpl       [m]         z-coordinate in accordance to wire.ipnCpl (Nwire-by-N1D-by-Ncpl)

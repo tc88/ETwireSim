@@ -1,0 +1,35 @@
+This file documents the msh struct used in the ETsimWire code.
+Field       Unit        Description
+.C          []          primary curl operator
+.DA         [m^2]       primary-face area matrix
+.DAd        [m^2]       dual-face area matrix
+.DS         [m]         primary-edge length matrix
+.DSd        [m]         dual-edge length matrix
+.DV         [m^3]       primary-cell volume matrix
+.DVd        [m^3]       dual-cell volume matrix
+.ipnXmin    []          all node indices at left facet
+.ipnXmax    []          all node indices at right facet
+.ipnYmin    []          all node indices at front facet
+.ipnYmax    []          all node indices at rear facet
+.ipnZmin    []          all node indices at bottom facet
+.ipnZmax    []          all node indices at top facet
+.ipeXmin    []          all edge indices at left facet
+.ipeXmax    []          all edge indices at right facet
+.ipeYmin    []          all edge indices at front facet
+.ipeYmax    []          all edge indices at rear facet
+.ipeZmin    []          all edge indices at bottom facet
+.ipeZmax    []          all edge indices at top facet
+.ipeGhost   []          canonical indices of all ghost edges
+.ipnGhost   []          canonical indices of all ghost nodes
+.Mx         []          stride in x-direction
+.My         []          stride in y-direction
+.Mz         []          stride in z-direction
+.np         []          total number of points
+.nx         []          number of points in x-direction
+.ny         []          number of points in y-direction
+.nz         []          number of points in z-direction
+.S          []          primary divergence operator
+.Sd         []          dual divergence operator
+.x          [m]         x-coordinates as row vector
+.y          [m]         y-coordinates as row vector
+.z          [m]         z-coordinates as row vector
