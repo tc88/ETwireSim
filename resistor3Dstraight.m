@@ -172,7 +172,7 @@ for m = selectMethods
             if verbose(1), fprintf('phi1D = [%s]\n',sprintf('%d ',u1D')); end
 
             % export solution to .vtr file for Paraview
-            if ismember(m,[2,6]) && i==Nsamples3D && j==1
+            if strcmp(refinement,'Fine') && ismember(m,[2,6]) && i==Nsamples3D && j==1
                 uParaview = u3D;
                 uParaview(wire.idx) = u1D;
                 fit_write_vtk(msh.x,msh.y,msh.z,sprintf('%sResultsMethod%d.vtr',modelname,m),{'phi',uParaview});

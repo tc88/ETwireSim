@@ -135,7 +135,7 @@ for i = 1:Nsamples3D
             end
         end
 
-        if i==Nsamples3D
+        if strcmp(refinement,'Fine') && i==Nsamples3D
             % obtain u for Paraview visualization
             ipn4uParaview = coords2idx(msh,mshInit.x',mshInit.y',mshInit.z');
             ipnWire4mshInit = coords2idx(mshInit,wire.x,wire.y,wire.z);

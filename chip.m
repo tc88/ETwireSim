@@ -62,6 +62,8 @@ ylabel('1D solution $$\overline{\mathbf{T}}(t_{0})$$ in K','Interpreter','Latex'
 print([modelname,'Results',refinement,'.pdf'],'-dpdf');
 
 % export results to Paraview
-fit_write_vtk(msh.x,msh.y,msh.z,sprintf('%sResults.vtr',modelname),{'potential',phi3D(:,end);'Temperature',T3D(:,end)});
+if strcmp(refinement,'Fine')
+    fit_write_vtk(msh.x,msh.y,msh.z,sprintf('%sResults.vtr',modelname),{'potential',phi3D(:,end);'Temperature',T3D(:,end)});
+end
 
 fprintf('finished chip test case after %d seconds.\n',toc(tstart));
