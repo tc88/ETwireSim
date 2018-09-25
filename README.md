@@ -11,7 +11,7 @@ This code is based on the following paper:
 T. Casper, U. Römer, H. De Gersem, S. Schöps. Coupled Simulation of
 Transient Heat Flow and Electric Currents in Thin Wires: Application to
 Bond Wires in Microelectronic Chip Packaging. Computers and Mathematics
-with Applications, submitted.
+with Applications, submitted. arXiv:1809.09034.
 
 license: see LICENSE.md
          the following files are distributed under a different license, being stated directly in the corresponding file:

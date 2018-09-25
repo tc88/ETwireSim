@@ -4,7 +4,7 @@
 % T. Casper, U. Roemer, H. De Gersem, S. Schoeps. Coupled Simulation of
 % Transient Heat Flow and Electric Currents in Thin Wires: Application to
 % Bond Wires in Microelectronic Chip Packaging. Computers and Mathematics
-% with Applications, submitted.
+% with Applications, submitted. arXiv:1809.09034.
 %
 % authors:
 % Thorben Casper, Ulrich Roemer, Herbert De Gersem, Sebastian Schoeps
